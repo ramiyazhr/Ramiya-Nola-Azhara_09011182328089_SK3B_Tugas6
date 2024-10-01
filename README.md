@@ -5,8 +5,8 @@
 ## NIM : 09011182328089
 
 ### Tugas Cara Memasang dan Mengonfigurasi SSH di Ubuntu 22.04
-### Langkah 1: Siapkan Ubuntu
-Memperbarui semua paket apt ke versi terbaru. Untuk melakukannya, gunakan perintah berikut:
+### Langkah 1: Persiapan Ubuntu
+Pertama, pastikan semua paket apt diperbarui ke versi terbaru. Gunakan perintah berikut untuk melakukan pembaruan:
 
 
 
@@ -15,64 +15,50 @@ Memperbarui semua paket apt ke versi terbaru. Untuk melakukannya, gunakan perint
 <br>
 
 ### Langkah 2: Instal SSH di Ubuntu
-OpenSSH belum terinstal di sistem, jadi mari kita instal secara manual. Untuk melakukannya, ketik di terminal:
+Jika OpenSSH belum terpasang, maka perlu diinstal secara manual. Jalankan perintah berikut untuk memulai proses instalasi:
 
 
 
 <br>
-Instalasi semua komponen yang diperlukan akan dimulai. Jawab "Ya" untuk semua perintah sistem.
-Setelah instalasi selesai, lanjutkan ke langkah berikutnya untuk memulai layanan.
+Proses instalasi akan berjalan, dan pastikan untuk menyetujui semua permintaan konfirmasi dari sistem dengan memilih "Ya". Setelah instalasi selesai, lanjut ke langkah berikutnya untuk mengaktifkan layanan SSH.
 <br>
 
 ### Langkah 3: Jalankan SSH
-Sekarang Anda perlu mengaktifkan layanan yang baru saja Anda instal menggunakan perintah di bawah ini:
+Setelah instalasi selesai, aktifkan layanan SSH yang baru terpasang dengan menjalankan perintah berikut:
+
+
+
+
+<br>
+Setelah itu, periksa apakah layanan SSH sudah aktif dan berjalan dengan perintah ini:
 
 
 
 
 
 <br>
-Untuk memverifikasi bahwa layanan diaktifkan dan berjalan dengan sukses
+Jika output menampilkan "Aktif: aktif (berjalan)", artinya layanan SSH sudah berhasil dijalankan. Jika sewaktu-waktu perlu menonaktifkannya, gunakan perintah berikut:
 
-
-
-
-
-<br>
-Outputnya harus berisi baris Aktif: aktif (berjalan), yang menunjukkan bahwa layanan berhasil berjalan.
-<br>Jika Anda ingin menonaktifkan layanan, jalankan:
 
 
 
 
 
 <br>
-Ini menonaktifkan layanan dan mencegahnya memulai saat boot.
+Perintah ini akan menonaktifkan layanan SSH dan mencegahnya berjalan secara otomatis saat booting.
 
 <br>
 
 ### Langkah 4: Konfigurasikan firewall
 
-Sebelum menghubungkan ke server melalui SSH, periksa firewall untuk memastikannya dikonfigurasi dengan benar.
-<br>Dalam kasus kami, kami telah menginstal UFW, jadi kami akan menggunakan perintah berikut:
-
-
-
-
-<br>
-Pada output, Anda akan melihat bahwa lalu lintas SSH diizinkan. Jika tidak tercantum, Anda perlu mengizinkan koneksi SSH yang masuk. Perintah ini akan membantu Anda:
-
+Sebelum mencoba koneksi ke server melalui SSH, pastikan firewall sudah dikonfigurasi dengan benar. Jika UFW sudah terpasang, gunakan perintah berikut untuk memeriksa:.
 
 
 
 
 
 <br>
-
-### Langkah 5: Hubungkan ke server
-
-Setelah Anda menyelesaikan semua langkah sebelumnya, Anda dapat masuk ke server menggunakan protokol SSH.
-<br>Untuk melakukannya, Anda memerlukan alamat IP atau nama domain server dan nama pengguna yang dibuat di server. Masukkan perintah:
+Jika output menunjukkan bahwa lalu lintas SSH diizinkan, berarti konfigurasi sudah benar. Namun, jika belum, perintah berikut bisa digunakan untuk membuka akses SSH:
 
 
 
@@ -80,4 +66,14 @@ Setelah Anda menyelesaikan semua langkah sebelumnya, Anda dapat masuk ke server 
 
 
 <br>
-Agar berhasil tersambung ke server jarak jauh, SSH harus diinstal dan dikonfigurasi di server jarak jauh dan komputer pengguna tempat Anda membuat sambungan.
+
+### Langkah 5: Koneksi ke server
+
+Setelah semua langkah sebelumnya selesai, kini bisa mencoba masuk ke server menggunakan SSH. Diperlukan alamat IP atau nama domain server serta username yang ada di server tersebut. Gunakan perintah ini untuk menghubungkan:
+
+
+
+
+
+<br>
+Pastikan SSH sudah terpasang dan dikonfigurasi baik di server jarak jauh maupun di komputer yang digunakan untuk memastikan koneksi berjalan dengan baik.
