@@ -45,17 +45,12 @@ Perintah ini akan menonaktifkan layanan SSH dan mencegahnya berjalan secara otom
 
 Sebelum mencoba koneksi ke server melalui SSH, pastikan firewall sudah dikonfigurasi dengan benar. Jika UFW sudah terpasang, gunakan perintah berikut untuk memeriksa:.
 
-
-
-
+![sudo ufw status active](https://github.com/user-attachments/assets/ad315747-4fd7-4e59-a695-01b4ff61aebd)
 
 <br>
 Jika output menunjukkan bahwa lalu lintas SSH diizinkan, berarti konfigurasi sudah benar. Namun, jika belum, perintah berikut bisa digunakan untuk membuka akses SSH:
 
-
-
-
-
+![sudo ufw allow ssh](https://github.com/user-attachments/assets/e15bb0c3-7c95-4abb-869b-52f62fcdc2ab)
 
 <br>
 
@@ -63,9 +58,7 @@ Jika output menunjukkan bahwa lalu lintas SSH diizinkan, berarti konfigurasi sud
 
 Setelah semua langkah sebelumnya selesai, kini bisa mencoba masuk ke server menggunakan SSH. Diperlukan alamat IP atau nama domain server serta username yang ada di server tersebut. Gunakan perintah ini untuk menghubungkan:
 
-
-
-
+![ssh peni-ilhami@](https://github.com/user-attachments/assets/6b90d286-19d9-48d9-82c3-4b2c986cc27d)
 
 <br>
 Pastikan SSH sudah terpasang dan dikonfigurasi baik di server jarak jauh maupun di komputer yang digunakan untuk memastikan koneksi berjalan dengan baik.
