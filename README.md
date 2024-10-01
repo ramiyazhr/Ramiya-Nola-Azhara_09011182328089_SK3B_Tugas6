@@ -8,16 +8,14 @@
 ### Langkah 1: Persiapan Ubuntu
 Pertama, pastikan semua paket apt diperbarui ke versi terbaru. Gunakan perintah berikut untuk melakukan pembaruan:
 
-
-
-
+![sudo apt update](https://github.com/user-attachments/assets/64ff87ce-5af8-4839-a4c6-75a25182abc5)
 
 <br>
 
 ### Langkah 2: Instal SSH di Ubuntu
 Jika OpenSSH belum terpasang, maka perlu diinstal secara manual. Jalankan perintah berikut untuk memulai proses instalasi:
 
-
+![sudo apt install](https://github.com/user-attachments/assets/d49f2b0a-7e37-4e73-8c10-2d2d4edeb6b6)
 
 <br>
 Proses instalasi akan berjalan, dan pastikan untuk menyetujui semua permintaan konfirmasi dari sistem dengan memilih "Ya". Setelah instalasi selesai, lanjut ke langkah berikutnya untuk mengaktifkan layanan SSH.
@@ -26,23 +24,17 @@ Proses instalasi akan berjalan, dan pastikan untuk menyetujui semua permintaan k
 ### Langkah 3: Jalankan SSH
 Setelah instalasi selesai, aktifkan layanan SSH yang baru terpasang dengan menjalankan perintah berikut:
 
-
-
+![sudo systemctl enable](https://github.com/user-attachments/assets/905723e9-ce8d-4e02-bc32-7f13fcf1c610)
 
 <br>
 Setelah itu, periksa apakah layanan SSH sudah aktif dan berjalan dengan perintah ini:
 
-
-
-
+![sudo status ssh](https://github.com/user-attachments/assets/91cd3928-7130-47f4-940a-3e126df060ba)
 
 <br>
 Jika output menampilkan "Aktif: aktif (berjalan)", artinya layanan SSH sudah berhasil dijalankan. Jika sewaktu-waktu perlu menonaktifkannya, gunakan perintah berikut:
 
-
-
-
-
+![sudo disable](https://github.com/user-attachments/assets/372beef2-5dd2-4d0e-bbb2-a46521c1ed4b)
 
 <br>
 Perintah ini akan menonaktifkan layanan SSH dan mencegahnya berjalan secara otomatis saat booting.
